@@ -1,0 +1,100 @@
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <title>Availabilty Checker</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+                <link rel="stylesheet" type="text/css" href="css/view.css" media="all">
+                <script src="js/view.js"></script>
+                <script src="js/calendar.js"></script>
+                <script src="js/jquery-1.10.1.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/d3.v3.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+            </head>
+            
+            <body>
+                <div class="header header-cont">
+                    <div class="container">
+                        <div class="headerLinkDiv">
+                            <div class="headerText">Availabilty Checker</div>
+                            <a class="navLink" href="#"></a>
+                        </div>
+                        <div class="headerNavLinkDiv">
+                            <a class="navLink" onclick="scrollToDiv('summary')">Railways</a>
+                        </div>
+                    </div>
+                </div>
+                <section id="summary" data-speed="10" data-type="background">
+                    <div class="container" style="padding: 5%;">
+                        <h2 style="color: white;">Railways Availability Checker</h2>
+                    </div>
+              <input type="text" name="trainname" id="train-name" placeholder="enter the train no" required />  
+                <form id="form_786507" class="appnitro"  method="post" action="">
+                    <ul > 
+                            <li id="li_2" >
+                    <label class="description" for="element_2">From </label>
+                    <div>
+                    <select class="element select medium" id="element_2" name="element_2"> 
+                        <option value="" selected="selected"></option>
+                            <option value="1" >PUNE</option>
+                            <option value="2" >Raipur</option>
+                            <option value="3" >Muri</option>
+                    </select>
+                    </div> 
+                    </li>		  
+                    <li id="li_3" >
+                    <label class="description" for="element_3">To </label>
+                    <div>
+                    <select class="element select medium" id="element_3" name="element_3"> 
+                        <option value="" selected="selected"></option>
+                        <option value="1" >PUNE</option>
+                        <option value="2" >RAIPUR</option>
+                        <option value="3" >MURI</option>
+                    </select>
+                    </div> 
+                    </li>		<li id="li_1" >
+                    <label class="description" for="element_1">Earliest Date of Travel </label>
+                     <div>
+                            
+                    <span>
+                        <input id="element_1_1" name="element_1_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+                        <label for="element_1_1">MM</label>
+                    </span>
+                    <span>
+                        <input id="element_1_2" name="element_1_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+                        <label for="element_1_2">DD</label>
+                    </span>
+                    <span>
+                        <input id="element_1_3" name="element_1_3" class="element text" size="4" maxlength="4" value="" type="text">
+                        <label for="element_1_3">YYYY</label>
+                    </span>
+                 </div>
+                    <span id="calendar_1">
+                        <img id="cal_img_1" class="datepicker" src="images/calendar.gif" alt="Pick a date.">	
+                    </span>
+                    <script type="text/javascript">
+                        Calendar.setup({
+                        inputField	 : "element_1_3",
+                        baseField    : "element_1",
+                        displayArea  : "calendar_1",
+                        button		 : "cal_img_1",
+                        ifFormat	 : "%B %e, %Y",
+                        onSelect	 : selectDate
+                        });
+                    </script>
+                     
+                    </li>
+                    <li class="buttons">
+                    <input type="hidden" name="form_id" value="786507" />
+                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                    </li>
+                    </ul>
+                    </form>	
+                            </div>
+                      </section>
+            </body>
+            <script src="js/utils.js"></script>
+            </html>
